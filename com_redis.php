@@ -2,10 +2,10 @@
 date_default_timezone_set('PRC');
 while(true){
 	$redis1 = new Redis();
-	$ret1 = $redis1->connect('10.32.26.30',6379);
+	$ret1 = $redis1->connect('127.0.0.1',6379);
 
 	$redis2 = new Redis();
-	$ret2 = $redis2->connect('10.32.26.29',6379);
+	$ret2 = $redis2->connect('127.0.0.1',6380);
 
 	$key = 'a_now_sz000001';
 	$content1 = $redis1->get($key);
